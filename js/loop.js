@@ -101,22 +101,93 @@ while (<condition>) {
 
 // Рассчитать сумму чисел от 1 до 10
 
-let sum = 0; // аккумулятор
+// let sum = 0; // аккумулятор
 
-for(let i = 1; i <= 10; ++i) {
-  sum = sum + i;
-  // console.log('i = ', i, ':  sum = ', sum)
+// for(let i = 1; i <= 10; ++i) {
+//   sum = sum + i;
+//   // console.log('i = ', i, ':  sum = ', sum)
+// }
+
+// // Рассчитать произведение (кратных 5) чисел от 1 до 10
+// let maxNumber = 28;
+// let foldFactor = 5;
+// let mult = 1;
+
+// for (let i = 1; i <= maxNumber; i++) {
+//   if (i % foldFactor === 0) {
+//     mult *= i;
+//   }
+// }
+
+// console.log(sum);
+
+// 1 while (c предусловием) - выполнится минимум 0 раз 
+/*
+while (условие) {
+  // тело цикла
 }
+*/
 
-// Рассчитать произведение (кратных 5) чисел от 1 до 10
-let maxNumber = 28;
-let foldFactor = 5;
-let mult = 1;
+// 2 for (c предусловием) - выполнится минимум 0 раз 
 
-for (let i = 1; i <= maxNumber; i++) {
-  if (i % foldFactor === 0) {
-    mult *= i;
-  }
+/*
+for(let i = 0; i <= n; i++) {
+    // тело цикла
 }
+*/
 
-console.log(sum);
+// 3 do .. while (c постусловием) - выполнится минимум 1 раз 
+
+/*
+do {
+  // тело цикла
+} while (условие)
+*/
+
+// задавать пользователю 2+2*2
+
+// const expectedValue = 6;
+// let userValue = null;
+
+// do {
+//   userValue = Number(prompt('Calculate 2+2*2'));
+// } while(userValue !== expectedValue);
+
+// alert('You are right!');
+
+// вывести все высокостные годы (нацело делиться на 4)
+// из заданого диапазона (for, do..while)
+// начало и конец диапазона вводить
+
+// let startYear = Number(prompt('Input start year'))
+// let endYear = Number(prompt('Input end year'))
+
+// for (let i = startYear; i <= endYear; i++) {
+//   if (i % 4 === 0 ) {
+//     console.log(i)
+//   }
+// }
+
+
+// if(startYear > endYear){
+//   const tmpStartYear = startYear;
+//   startYear = endYear;
+//   endYear = tmpStartYear;
+// }
+// let currentYear = startYear;
+//   do {
+//     if (currentYear % 4 === 0 ) {
+//       console.log(currentYear)
+//     }
+//     currentYear++;
+//   } while (currentYear <= endYear)
+
+// *таблица умножения
+
+// for(let i = 1; i<=10; i++){
+//   console.group('Умножение на ' + i)
+//   for (let j = 1; j<=10;j++){
+//       console.log(i + '*' + j + '=' + i*j);
+//   }
+//   console.groupEnd()
+// }
