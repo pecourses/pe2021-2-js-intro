@@ -16,6 +16,7 @@ console.log('match :>> ', 'qwerty qwerty'.match(regExp1));
 // Границы
 // ^   $
 // \b - граница слова
+// \B - не граница слова
 
 // \d [0-9]
 // [a-z]
@@ -91,3 +92,31 @@ console.log(
     /^(?=.*[A-Z].*)(?=.*[a-z].*)(?=.*[0-9].*)(?=.*[!@#$%^&*].*).{8,16}$/
   )
 );
+
+// Методы регулярок для строк:
+// -------- str.replace(regExp, newSubStr);
+// Заменить последовательности пробельных символов на  пробел
+const str1 = 'I     am          Grut !!!';
+const newStr = str1.replace(/\s{2,}/g, ' ');
+
+//Убрать ненормативную лексику из сообщений (fuck, ass, XXX, xxx)
+const str2 = 'I love XXX, fuck flower! Fuck qwerty!';
+const filteredMes = str2.replace(/(fuck|ass|xxx)/gi, '@#$%^');
+console.log('filteredMes :>> ', filteredMes);
+
+// --------- str.split(regExp);
+const str3 = 'Qwerty     uiop    []';
+const str4 = str3.split(' ');
+console.log('str4 :>> ', str4);
+const str5 = str3.split(/\s+/g);
+console.log('str5 :>> ', str5);
+
+// Получить массив [год, месяц, день]
+// '1999-01-01' => ['1999', '01', '01']
+// '1999/01/01' => ['1999', '01', '01']
+// '1999.01.01' => ['1999', '01', '01']
+const date = '1990/01/01';
+
+console.log(date.split(/\.|-|\//g));
+console.log('1999-01-01'.split(/[\/.-]/g));
+console.log('1999.01.01'.split(/[.]|[-]|[\/]/g));
